@@ -1,0 +1,67 @@
+<html>
+<head>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="highstock.js"></script>
+<script src="exporting.js"></script>
+<script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap -->
+    <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+<body>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#" onclick="show_me('container'); show_me('container1');">Home</a></li>
+   
+    <li><a href="#" onclick="hide_me('container'); show_me('container1');">Temprature</a></li>
+    <li><a href="#" onclick="hide_me('container1'); show_me('container');">Inclination</a></li>
+  </ul>
+</div>
+
+	<div class="panel panel-primary col-md-9" id="container">
+
+		
+		<div class="panel-body" ></div>
+	</div>
+  <div class="panel panel-default col-md-3">
+	
+		<div class="panel-body" id="container2">
+		<div id="lor">
+			
+			<text><b>Sensor and Data information</b></text>
+			<br>
+			<text><b>Standard deviation:</b>11.29 </text>
+			<br>
+			<text><b>Mean:</b>25.84 </text>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			
+			  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			
+			  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+			
+			  <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+		</div>
+	</div>
+	</div>
+	<div class="panel panel-primary col-md-9" id="container1">
+		<div class="panel-body"></div>
+	</div>
+	
+		<script>
+		function hide_me(id){
+		$('#'+id).hide();
+		}
+		function show_me(id){
+		$('#'+id).show();
+		}
+		</script>
+		<script src="inc.js"></script>
+		<script src="temp.js"></script>
+		
+		</div>
+    </div>
+
+</body>
+</html>
+

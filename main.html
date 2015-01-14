@@ -1,0 +1,149 @@
+<html>
+<head>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="highstock.js"></script>
+<script src="exporting.js"></script>
+<script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap -->
+    <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+<body>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#" onclick="show_me('container'); show_me('container1');">Home</a></li>
+   
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="hide_me('container'); show_me('container1');">Sensors</a>
+	      <ul class="dropdown-menu">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Accelerometer</a>
+							<ul>
+								<li><a href="#">ch-1</a></li>
+								<li><a href="#">ch-2</a></li>
+								<li><a href="#">ch-3</a></li>
+								<li><a href="#">ch-4</a></li>
+							</ul>
+				</li>
+                <li><a href="#">Strain-Guage</a></li>
+                <li><a href="#">Displacement</a></li>
+                <li><a href="#">Sensor-4</a></li>
+          </ul>
+    </li>
+	
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="hide_me('container1'); show_me('container');">Channels</a>
+			<ul class="dropdown-menu">
+                <li><a href="#">ch-1</a></li>
+                <li><a href="#">ch-2</a></li>
+                <li><a href="#">ch-3</a></li>
+                <li><a href="#">ch-4</a></li>
+              </ul>
+            </li>
+    <li><a href="#" onclick="hide_me('container1'); show_me('container');">Information</a></li>
+  </ul>
+</div>
+
+	<div class="panel panel-primary col-md-9" id="container">
+	
+		<div class="panel-body" ></div>
+	</div>
+		<div class="panel panel-primary col-md-9">
+	
+	<div class="panel-body" >
+		<ul class="nav nav-tabs">
+			<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Smoothing <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Moving Average</a></li>
+      <li><a href="#">Linear Moving Average</a></li>
+      <li><a href="#">iTrend</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Noise <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Noise Removal</a></li>
+      <li><a href="#">Noise Seperation</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+      Forecasting <span class="caret"></span>
+    </a>
+  </li>
+</ul>
+</div>
+	</div>
+  <div class="panel panel-default col-md-3">
+	
+		<div class="panel-body" id="container2" style="float:right">
+		<div id="lor">
+			
+			<text><b>Sensor and Data information</b></text>
+			<br>
+			<text><b>Standard deviation:</b>11.29 </text>
+			<br>
+			<text><b>Mean:</b>25.84 </text>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<text><b>Statistics of the data</b></text>
+	<form class="form" action="demo_form_action.asp" method="set">
+		
+		<p class="min">
+			<label for="min">minumum values</label>
+			<input type="text" name="min" id="min"/>
+		</p>
+		
+		<p class="max">
+			<label for="max">Maximum value</label>
+			<input type="text" name="max" id="max"/>
+		</p>
+		
+		<p class="mean">
+			<label for="mean">Mean (Average)</label>
+			<input type="text" name="mean" id="mean"/>
+		</p>		
+
+		<p class="std">
+			<label for="std">Standard Deviation</label>
+			<input type="text" name="std" id="std"/>
+		</p>
+		
+	</form>
+
+ <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+</div>
+	</div>
+	</div>
+	<div class="panel panel-primary col-md-9" id="container1">
+		<div class="panel-body"></div>
+	</div>
+	<div class="panel panel-primary col-md-9" >
+		<div class="panel-body" >
+		<button onclick="myFunction()">Smoothing</button>
+		<button onclick="myFunction()">Noise Removal</button>
+		<button onclick="myFunction()">Forecasting</button>
+		<input type="date" placeholder="From"/>
+		<input type="date" placeholder="To"/>
+		</div>
+	</div>
+		<script>
+		function hide_me(id){
+		$('#'+id).hide();
+		}
+		function show_me(id){
+		$('#'+id).show();
+		}
+		</script>
+		<script src="inc.js"></script>
+		<script src="temp.js"></script>
+		
+		</div>
+    </div>
+
+</body>
+</html>
